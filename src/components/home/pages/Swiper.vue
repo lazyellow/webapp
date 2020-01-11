@@ -3,7 +3,7 @@
     <swiper :options="swiperOption">
       <!-- slides -->
       <swiper-slide 
-      v-for='item in swiperList' :key='item.id'>
+        v-for='item in swiperList' :key='item.id'>
           <img :src="item.imgUrl" />
       </swiper-slide>
       <!-- 分页器小圆点↓ -->
@@ -42,25 +42,30 @@ export default {
     }
 };
 </script>
-<style type="text/css" scoped>
+<style type="text/css">
 
     .header-swiper{
-        /* width: 100%;
-        height: 2rem; */
+        width: 100%;
+        height: 2rem;
+        backgrond:#ccc;
 
         /* 解决当图片还没加载出来之前，有个背景色填充占位，防掉块现象 */
-        background:#ccc;
-        height:0;
+        /* background:#ccc;
+        height:0; */
         /* 因为高为0，padding根据宽375来计算百分比，26.67%=100px */
-        padding-bottom:26.67%;
+        /* padding-bottom:60%; */
+    }
+
+    .header-swiper .swiper-wrapper{
+        width:100%;
+        height:2rem;
     }
 
     .header-swiper img{
         width: 100%;
-        height: 2rem;
+        height: 100%;
     }
 
-    // 分页器小圆点active状态的颜色
     .header-swiper >>> .swiper-pagination-bullet-active{
         background:#fff;
     }
