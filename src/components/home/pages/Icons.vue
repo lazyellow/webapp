@@ -1,10 +1,12 @@
 <template>
     <div class="icons">
         <swiper :options="swiperOption">
+            <!-- for循环page这个计算属性，是只有两个数组pages[0]和pages[1]，所以只生成了两个swiper-slide -->
             <swiper-slide v-for='(item,key) in page' :key='key'>
-                <div class="icons-item" v-for="page in item" :key="page.id">
-                    <img :src="page.imgUrl" />
-                    <p>{{page.title}}</p>
+                <!-- 再将上面的item即pages[0],pages[1]里的值一个个遍历出来生成单独的div -->
+                <div class="icons-item" v-for="i in item" :key="i.id">
+                    <img :src="i.imgUrl" />
+                    <p>{{i.title}}</p>
                 </div>
             </swiper-slide>
         </swiper>
@@ -79,16 +81,21 @@ export default {
         ]
         };
     },
+    // 定义计算属性
     computed: {
+        // 栏目分页器
         page() {
-        let pages = [];
-        this.iconsList.forEach((item, index)=>{
-            let idx = Math.floor(index/8);
-            if (!pages[idx])
-                pages[idx] = [];
-            pages[idx].push(item);
-        });
-        return pages;
+            // 定义一个二维数组pages来存放返回值
+            let pages = [];
+            // 循环遍历iconslist数组，item是每一个的值，index是数组的索引
+            this.iconsList.forEach((item, index)=>{
+                // 用索引/8然后取整数，0-7取整是0，8-15取整是1。取正的数用作定义数组下标：pages[0],pages[1]
+                let idx = Math.floor(index/8);
+                if (!pages[idx])   //如果这个数组还为存在就创建该数组
+                    pages[idx] = [];
+                pages[idx].push(item);     //将遍历的值放进二维数组pages里
+            });
+            return pages;
         }
     }
 };

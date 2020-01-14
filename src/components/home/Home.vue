@@ -3,18 +3,21 @@
         <home-header></home-header>
         <home-swiper></home-swiper>
         <home-icons></home-icons>
+        <home-location></home-location>
     </div>
 </template>
 <script>
 // 将header引入进来
 import HomeHeader from './pages/Header'
 import HomeSwiper from './pages/Swiper'
-import HomeIcons from './pages/icons'
+import HomeIcons from './pages/Icons'
+import HomeLocation from './pages/Location'
 export default{
     components:{
         HomeHeader,
         HomeSwiper,
-        HomeIcons
+        HomeIcons,
+        HomeLocation
     }
 }
 </script>
