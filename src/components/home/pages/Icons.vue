@@ -104,6 +104,7 @@ export default {
 .icons {
   width: 100%;
   overflow: hidden;
+  background: #fff;
 }
 .icons-item {
   width: 25%;
