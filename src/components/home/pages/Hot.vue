@@ -63,7 +63,8 @@ export default {
     }
 }
 </script>
-<style scoped>
+<style scoped lang='stylus'>
+@import '~css/common.styl'
     .hot{
         margin-top:.2rem;
         font-size: .28rem;
@@ -108,6 +109,13 @@ export default {
     .hot-item p{
         margin-top: .1rem;
         text-align: center;
+        /* 以下三段实现文本溢出显示省略号的效果 */
+        /* 定义段落中的文本不换行↓ */
+        /* white-space: nowrap; */
+        /* 文本超出宽度显示省略号 */
+        /* text-overflow:ellipsis;
+        overflow:hidden; */
+        textOverflow();
     }
     .hot-item p .hot-mark{
         color:#ff8300;
