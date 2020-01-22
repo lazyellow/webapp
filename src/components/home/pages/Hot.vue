@@ -19,46 +19,47 @@
 </template>
 <script>
 export default {
+    props:['hotList'],
     data(){
         return {
-            hotList:[
-                {
-                    id:"01",
-                    imgUrl:"http://img1.qunarzz.com/sight/p0/2001/95/95745a4aff560572a3.water.jpg_250x250_ffaab4fd.jpg",
-                    title:"长隆野生动物园",
-                    mark:"269"
-                },
-                {
-                    id:"02",
-                    imgUrl:"http://img1.qunarzz.com/sight/p0/2001/8b/8b7ddfe2e27d929fa3.water.jpg_250x250_074c3920.jpg",
-                    title:"广州长隆旅游度假区",
-                    mark:"89"
-                },
-                {
-                    id:"03",
-                    imgUrl:"http://img1.qunarzz.com/sight/p0/1509/80/9535a0d28468b3c6c910d87f1a4fdbe8.water.jpg_250x250_9e672db6.jpg",
-                    title:"岭南印象园",
-                    mark:"42"
-                },
-                {
-                    id:"04",
-                    imgUrl:"http://img1.qunarzz.com/sight/p0/1603/1c/1c67791edbe2677b90.img.jpg_250x250_8f1dcbbd.jpg",
-                    title:"珠江夜游",
-                    mark:"38.5"
-                },
-                {
-                    id:"05",
-                    imgUrl:"http://img1.qunarzz.com/sight/p0/201309/06/a03726324b885c8bc8d65eac.jpg_250x250_468addc5.jpg",
-                    title:"广州塔",
-                    mark:"145"
-                },
-                {
-                    id:"06",
-                    imgUrl:"http://img1.qunarzz.com/sight/p0/2001/da/da9419ecb88953aca3.water.jpg_250x250_cc26ec8b.jpg",
-                    title:"长隆国际大马戏剧院",
-                    mark:"280.5"
-                }
-            ]
+            // hotList:[
+            //     {
+            //         id:"01",
+            //         imgUrl:"http://img1.qunarzz.com/sight/p0/2001/95/95745a4aff560572a3.water.jpg_250x250_ffaab4fd.jpg",
+            //         title:"长隆野生动物园",
+            //         mark:"269"
+            //     },
+            //     {
+            //         id:"02",
+            //         imgUrl:"http://img1.qunarzz.com/sight/p0/2001/8b/8b7ddfe2e27d929fa3.water.jpg_250x250_074c3920.jpg",
+            //         title:"广州长隆旅游度假区",
+            //         mark:"89"
+            //     },
+            //     {
+            //         id:"03",
+            //         imgUrl:"http://img1.qunarzz.com/sight/p0/1509/80/9535a0d28468b3c6c910d87f1a4fdbe8.water.jpg_250x250_9e672db6.jpg",
+            //         title:"岭南印象园",
+            //         mark:"42"
+            //     },
+            //     {
+            //         id:"04",
+            //         imgUrl:"http://img1.qunarzz.com/sight/p0/1603/1c/1c67791edbe2677b90.img.jpg_250x250_8f1dcbbd.jpg",
+            //         title:"珠江夜游",
+            //         mark:"38.5"
+            //     },
+            //     {
+            //         id:"05",
+            //         imgUrl:"http://img1.qunarzz.com/sight/p0/201309/06/a03726324b885c8bc8d65eac.jpg_250x250_468addc5.jpg",
+            //         title:"广州塔",
+            //         mark:"145"
+            //     },
+            //     {
+            //         id:"06",
+            //         imgUrl:"http://img1.qunarzz.com/sight/p0/2001/da/da9419ecb88953aca3.water.jpg_250x250_cc26ec8b.jpg",
+            //         title:"长隆国际大马戏剧院",
+            //         mark:"280.5"
+            //     }
+            // ]
         }
     }
 }

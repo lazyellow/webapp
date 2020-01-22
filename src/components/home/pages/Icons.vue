@@ -14,71 +14,72 @@
 </template>
 <script>
 export default {
+    props:['iconsList'],
     data() {
         return {
         swiperOption:{},
-        iconsList: [
-            {
-            id: "01",
-            imgUrl:
-                "https://youimg1.c-ctrip.com/target/100o0s000000hmcopBF88.png",
-            title: "景点门票"
-            },
-            {
-            id: "02",
-            imgUrl:
-                "https://youimg1.c-ctrip.com/target/100o0s000000hmcopBF88.png",
-            title: "必游榜单"
-            },
-            {
-            id: "03",
-            imgUrl:
-                "https://youimg1.c-ctrip.com/target/100o0s000000hmcopBF88.png",
-            title: "夏日玩水"
-            },
-            {
-            id: "04",
-            imgUrl:
-                "https://youimg1.c-ctrip.com/target/100o0s000000hmcopBF88.png",
-            title: "主题乐园"
-            },
-            {
-            id: "05",
-            imgUrl:
-                "https://youimg1.c-ctrip.com/target/100o0s000000hmcopBF88.png",
-            title: "动植物园"
-            },
-            {
-            id: "06",
-            imgUrl:
-                "https://youimg1.c-ctrip.com/target/100o0s000000hmcopBF88.png",
-            title: "故宫"
-            },
-            {
-            id: "07",
-            imgUrl:
-                "https://youimg1.c-ctrip.com/target/100o0s000000hmcopBF88.png",
-            title: "一日游"
-            },
-            {
-            id: "08",
-            imgUrl:
-                "https://youimg1.c-ctrip.com/target/100o0s000000hmcopBF88.png",
-            title: "公园"
-            },
-            {
-            id: "09",
-            imgUrl:
-                "https://youimg1.c-ctrip.com/target/100o0s000000hmcopBF88.png",
-            title: "游乐园"
-            },
-            {
-            id: "10",
-            imgUrl:
-                "https://youimg1.c-ctrip.com/target/100o0s000000hmcopBF88.png",
-            title: "全部玩乐"
-            }
-        ]
+        // iconsList: [
+        //     {
+        //     id: "01",
+        //     imgUrl:
+        //         "https://youimg1.c-ctrip.com/target/100o0s000000hmcopBF88.png",
+        //     title: "景点门票"
+        //     },
+        //     {
+        //     id: "02",
+        //     imgUrl:
+        //         "https://youimg1.c-ctrip.com/target/100o0s000000hmcopBF88.png",
+        //     title: "必游榜单"
+        //     },
+        //     {
+        //     id: "03",
+        //     imgUrl:
+        //         "https://youimg1.c-ctrip.com/target/100o0s000000hmcopBF88.png",
+        //     title: "夏日玩水"
+        //     },
+        //     {
+        //     id: "04",
+        //     imgUrl:
+        //         "https://youimg1.c-ctrip.com/target/100o0s000000hmcopBF88.png",
+        //     title: "主题乐园"
+        //     },
+        //     {
+        //     id: "05",
+        //     imgUrl:
+        //         "https://youimg1.c-ctrip.com/target/100o0s000000hmcopBF88.png",
+        //     title: "动植物园"
+        //     },
+        //     {
+        //     id: "06",
+        //     imgUrl:
+        //         "https://youimg1.c-ctrip.com/target/100o0s000000hmcopBF88.png",
+        //     title: "故宫"
+        //     },
+        //     {
+        //     id: "07",
+        //     imgUrl:
+        //         "https://youimg1.c-ctrip.com/target/100o0s000000hmcopBF88.png",
+        //     title: "一日游"
+        //     },
+        //     {
+        //     id: "08",
+        //     imgUrl:
+        //         "https://youimg1.c-ctrip.com/target/100o0s000000hmcopBF88.png",
+        //     title: "公园"
+        //     },
+        //     {
+        //     id: "09",
+        //     imgUrl:
+        //         "https://youimg1.c-ctrip.com/target/100o0s000000hmcopBF88.png",
+        //     title: "游乐园"
+        //     },
+        //     {
+        //     id: "10",
+        //     imgUrl:
+        //         "https://youimg1.c-ctrip.com/target/100o0s000000hmcopBF88.png",
+        //     title: "全部玩乐"
+        //     }
+        // ]
         };
     },
     // 定义计算属性

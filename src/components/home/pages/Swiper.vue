@@ -14,22 +14,23 @@
 
 <script type="text/javascript">
 export default {
+    props:['swiperList'],
     data(){
         return{
-            swiperList:[
-                {
-                    id:"01",
-                    imgUrl:require("@/assets/img/swiper1.jpg")
-                },
-                {
-                    id:"02",
-                    imgUrl:require("@/assets/img/swiper2.jpg")
-                },
-                {
-                    id:"03",
-                    imgUrl:require("@/assets/img/swiper3.jpg")
-                }
-            ],
+            // swiperList:[
+            //     {
+            //         id:"01",
+            //         imgUrl:require("@/assets/img/swiper1.jpg")
+            //     },
+            //     {
+            //         id:"02",
+            //         imgUrl:require("@/assets/img/swiper2.jpg")
+            //     },
+            //     {
+            //         id:"03",
+            //         imgUrl:require("@/assets/img/swiper3.jpg")
+            //     }
+            // ],
             swiperOption:{
                 // 分页器-swiper地下的小圆点
                 pagination: {
