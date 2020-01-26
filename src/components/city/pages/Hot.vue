@@ -26,8 +26,8 @@ export default {
 </script>
 <style>
     .hot-title{
-        padding: .3rem; 
-        font-size: .26rem;
+        padding: .2rem .3rem; 
+        font-size: .24rem;
         color: #212121;
     }
     .hot-list{
@@ -45,7 +45,7 @@ export default {
         left: 33.33333%;
         border-left: .02rem solid #ddd;
         border-right: .02rem solid #ddd;
-    }
+    }   
     .hot-item{
         width: 33.33333%;
         height: .9rem;
