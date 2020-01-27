@@ -30,8 +30,8 @@ export default {
         color: #212121;
     }
     .sort-list{
-        /* position: relative;
-        overflow: hidden; */
+        position: relative;
+        overflow: hidden;
         background:#fff;
         font-size: .28rem;
         color: #212121;
