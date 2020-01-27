@@ -1,19 +1,19 @@
 <template>
     <div class="list">
-        <div class="list-title">A</div>
-        <ul class="list-msg">
-            <li class="list-item">阿克苏地区</li>
-            <li class="list-item">阿克苏地区</li>
-            <li class="list-item">阿克苏地区</li>
-            <li class="list-item">阿克苏地区</li>
-            <li class="list-item">阿克苏地区</li>
-            <li class="list-item">阿坝藏族羌族自治州</li>
-        </ul>
+        <div v-for='(val,key) in cities'>
+            <div class="list-title">{{key}}</div>
+            <ul class="list-msg">
+                <li class="list-item"
+                    v-for='item in val' :key='item.id'>
+                    {{item.name}}
+                </li>
+            </ul>
+        </div>
     </div>
 </template>
 <script>
 export default {
-    
+    props:["cities"]
 }
 </script>
 <style lang="stylus">
