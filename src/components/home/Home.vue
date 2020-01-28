@@ -38,7 +38,8 @@ export default{
             iconsList:[],
             hotList:[],
             likeList:[],
-            vacationList:[]
+            vacationList:[],
+            changeCity:''
         }
     },
     computed:{
@@ -64,7 +65,14 @@ export default{
         }
     },
     mounted(){
+        this.changeCity=this.city
         this.getHttp()
+    },
+    activated(){
+        if(this.city != this.changeCity){   //如果点击后的city值和点击前的不一样就重新发送一次数据请求进行数据渲染
+            this.getHttp();
+            this.changeCity=this.city;
+        }
     }
 }
 </script>
