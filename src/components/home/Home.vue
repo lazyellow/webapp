@@ -11,6 +11,7 @@
     </div>
 </template>
 <script>
+import {mapState} from 'vuex'
 // 将header引入进来
 import HomeHeader from './pages/Header'
 import HomeSwiper from './pages/Swiper'
@@ -40,18 +41,30 @@ export default{
             vacationList:[]
         }
     },
-    mounted(){
-        this.$http.get("/api/dataHome.json")
+    computed:{
+        ...mapState(['city'])
+    },
+    methods:{
+        getHttp(){
+            this.$http.get("/api/dataHome.json")
             .then((res)=>{
                 // console.log(res);
                 // console.log(res.data.data);
-                const data = res.data.data[0];
-                this.swiperList = data.swiperList;
-                this.iconsList = data.iconsList;
-                this.hotList = data.hotList;
-                this.likeList = data.likeList;
-                this.vacationList = data.vacationList;
+                const data = res.data.data;
+                data.forEach((item,index)=>{
+                    if(item.city==this.city){
+                        this.swiperList = item.swiperList;
+                        this.iconsList = item.iconsList;
+                        this.hotList = item.hotList;
+                        this.likeList = item.likeList;
+                        this.vacationList = item.vacationList;
+                    };
+                })
             })
+        }
+    },
+    mounted(){
+        this.getHttp()
     }
 }
 </script>
