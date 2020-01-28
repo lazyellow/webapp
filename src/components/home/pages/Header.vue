@@ -13,13 +13,21 @@
         </div>
         <div class="header-right">
             <router-link to="/city">
-            北京<span class="iconfont">&#xe64d;</span>
+                {{city}}
+                <span class="iconfont">&#xe64d;</span>
             </router-link>
         </div>
     </div>
 </template>
 
-<script></script>
+<script>
+    import {mapState} from 'vuex'
+    export default{
+        computed:{
+            ...mapState(['city'])
+        }
+    }
+</script>
 
 <style scoped lang='stylus'>
 @import '~css/var.styl'

@@ -5,7 +5,11 @@
         <div class="hot">
             <div class="hot-title">热门城市</div>
             <ul class="hot-list">
-                <li class="hot-item" v-for="item in hotCities" :key="item.id">{{item.name}}</li>
+                <li class="hot-item" 
+                    v-for="item in hotCities" :key="item.id"
+                    @click='changeCityName(item.name)'>
+                    {{item.name}}
+                </li>
             </ul>
         </div>
         <!--sort-->
@@ -27,7 +31,11 @@
                 :ref='key'>
                 <div class="list-title">{{key}}</div>
                 <ul class="list-msg">
-                <li class="list-item" v-for="item in val" :key="item.id">{{item.name}}</li>
+                <li class="list-item" 
+                    v-for="item in val" :key="item.id"
+                    @click='changeCityName(item.name)'>
+                    {{item.name}}
+                </li>
                 </ul>
             </div>
         </div>
@@ -36,6 +44,7 @@
 </template>
 <script>
 import BScroll from 'better-scroll'
+import {mapMutations} from 'vuex'
 export default {
     props: ["hotCities","cities"],
     data(){
@@ -52,7 +61,12 @@ export default {
             // console.log(sortName);
             // console.log(this.$refs[sortName][0]);
             this.scroll.scrollToElement(this.$refs[sortName][0]);
-        }
+        },
+        changeCityName(cityName){
+            this.changeCity(cityName);
+            this.$router.push('/')  //跳转回到首页
+        },
+        ...mapMutations(['changeCity'])
     }
 };
 </script>
@@ -89,6 +103,7 @@ export default {
   border-right: 0.02rem solid #ddd;
 }
 .hot-item {
+  position: relative;
   width: 33.33333%;
   height: 0.9rem;
   line-height: 0.9rem;
@@ -141,12 +156,13 @@ export default {
   position: absolute;
   content: ' ';
   left: 75%;
-  width: 25%;
+  width: 0%;
   height: 100%;
   border-left: 0.02rem solid #ddd;
 }
 
 .list-item {
+  position:relative;
   width: 25%;
   line-height: 0.9rem;
   font-size: 0.28rem;
