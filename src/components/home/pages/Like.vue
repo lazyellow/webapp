@@ -6,7 +6,8 @@
         </div>
         <ul>
             <li class='like-item border-bottom'
-                v-for='item in likeList'>
+                v-for='item in likeList'
+                @click='toDetails'>
                 <div class="like-img">
                     <img :src="item.imgUrl">
                 </div>
@@ -23,6 +24,7 @@
                         </span>
                     </div>
                 </div>
+
             </li>
         </ul>
     </div>
@@ -66,6 +68,11 @@ export default {
             //         map:'广州市番禺区长隆'
             //     }
             // ]
+        }
+    },
+    methods:{
+        toDetails(){
+            this.$router.push("/detail")
         }
     }
 }
