@@ -3,14 +3,16 @@
         <div class="header-return"
             v-show='showHeader'>
             <span class="border-return"></span>
-            <span class="iconfont return">&#xe607;</span>
+            <span class="iconfont return" @click='toHome'>
+                &#xe607;
+            </span>
         </div>
 
         <div class="header-top"
             v-show='!showHeader'
             :style='styleOpacity'>
             <div class="header-left">
-                <span class="iconfont">
+                <span class="iconfont" @click='toHome'>
                     &#xe607;
                 </span>
             </div>
@@ -28,6 +30,11 @@ export default {
             }
         }
     },
+    methods:{
+        toHome(){
+            this.$router.push("/");
+        }
+    },
     mounted(){
         let That = this;
         // 添加滚动事件监听
@@ -38,7 +45,7 @@ export default {
                 // 计算透明度的值，根据滚动时的top值进行动态变化透明度
                 let opacity = top/130;
                 That.styleOpacity={opacity}
-            }else{
+            }else{ 
                 That.showHeader = true;
             }
         })
